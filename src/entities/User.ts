@@ -12,8 +12,10 @@ export class User extends BaseEntity {
     @Column()
     lastname: string;
 
-    @Column()
-    dni: number
+    @Column({
+        default: 0
+    })
+    dni: number;
 
     @OneToMany(() => ReservedDate, (date) => date.user)
     reservedDate: ReservedDate[];
