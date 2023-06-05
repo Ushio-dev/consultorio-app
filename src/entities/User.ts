@@ -1,7 +1,6 @@
 import { BaseEntity, Column, Entity, ManyToOne, OneToMany, OneToOne, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm'
 import { ReservedDate } from './ReserverdDate';
 
-
 @Entity()
 export class User extends BaseEntity {
     @PrimaryGeneratedColumn()
