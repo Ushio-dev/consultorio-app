@@ -8,8 +8,9 @@ import { AppDataSource } from "./db"
 async function main() {
     await AppDataSource.initialize()
     console.log('conectado')
-    app.listen(3000, () => {
-        console.log(`Server on Port ${3000}`)
+    let port = process.env.PORT || 3000;
+    app.listen(port, () => {
+        console.log(`Server on Port ${port}`)
     })
 }
 
