@@ -33,7 +33,8 @@ export class Schedule extends BaseEntity {
         default: DateState.D
     })
     state: DateState
-
+/*
     @ManyToOne(() => Doctor, (doctor) => doctor.schedule)
     doctor: Doctor;
+    */
 }

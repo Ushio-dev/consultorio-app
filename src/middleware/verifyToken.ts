@@ -12,7 +12,7 @@ export const TokenValidation = (req: Request, res: Response, next: NextFunction)
 
     if (!token) return res.status(401).json('access denied')
 
-    const payload = jwt.verify(token, process.env.URL_DATABASE || 'token') as IPayload
+    const payload = jwt.verify(token, process.env.TOKEN_SECRET || 'token') as IPayload
     req.userId = payload.id
 
     next()

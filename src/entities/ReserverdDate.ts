@@ -11,7 +11,22 @@ export class ReservedDate extends BaseEntity {
     @ManyToOne(() => User, (user) => user.reservedDate)
     user: User;
 
+    /*
     @OneToOne(() => Schedule)
     @JoinColumn()
     date: Schedule;
+*/
+    @Column({
+        type: 'date'
+    })
+    day: string;
+
+    @Column({
+        type: 'time'
+    })
+    time: string;
+
+
+    @ManyToOne(() => Doctor, (doctor) => doctor.reservedDate)
+    doctor: Doctor;
 }

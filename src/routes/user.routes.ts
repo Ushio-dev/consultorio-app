@@ -1,13 +1,11 @@
 import { Router } from "express";
 import { login, register } from "../controller/auth.controller";
 import { TokenValidation } from '../middleware/verifyToken'
-import { getDates } from "../controller/user.controller";
+import { getDates, saveDate } from "../controller/user.controller";
 
 const router = Router()
 
-router.post("/register", register)
-router.post('/login', login)
-router.get('/', TokenValidation)
-router.get('/alldates', getDates)
+router.get('/alldates',TokenValidation, getDates)
+router.post("/newdate", TokenValidation, saveDate)
 
 export default router;
