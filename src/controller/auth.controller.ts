@@ -6,7 +6,7 @@ export const register = async (req: Request, res: Response) => {
         const user = await registerService(req)
         res.json(user).status(200)
     } catch (e: any) {
-        res.status(500).json({'msg': 'Invalid Fields'})
+        res.status(400).json({'msg': 'Invalid Fields'})
     }
     
 }

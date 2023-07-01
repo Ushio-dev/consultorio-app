@@ -7,7 +7,6 @@ const router = Router()
 
 router.post("/register", register)
 router.post('/login', login)
-router.get('/', TokenValidation)
-router.get('/alldates', getDates)
+//router.get('/', TokenValidation)
 
 export default router;

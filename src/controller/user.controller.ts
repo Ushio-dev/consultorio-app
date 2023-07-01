@@ -8,7 +8,7 @@ export const getDates = async (req: Request, res: Response) => {
         res.json(dates);
     } catch (error: any) {
         console.log(error);
-        res.status(500).json({ 'mgs': error.message });
+        res.status(400).json({ 'mgs': error.message });
     }
 }
 
@@ -19,6 +19,6 @@ export const saveDate = async (req: Request, res: Response) => {
         res.json(date);
     } catch (error: any) {
         console.log(error);
-        res.status(500).json({ 'mgs': error.message });
+        res.status(400).json({ 'mgs': error.message });
     }
 }
